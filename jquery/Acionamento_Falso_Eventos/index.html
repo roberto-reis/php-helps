@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .fundo{
+            background-color: #900;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">Clique aqui</button>
+    <button id="btn2">Botão</button>
+
+    <p>teste</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        
+        $(function(){
+
+            $("#btn1").bind('click', function(){                
+                $("#btn2").trigger('click');
+            });
+
+            $("#btn2").bind('click', function(){
+                alert("Clicou no Botão 2!");
+            });
+
+
+
+        });
+
+    </script>
+</body>
+</html>

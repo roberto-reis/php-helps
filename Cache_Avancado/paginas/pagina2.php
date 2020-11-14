@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 400px;
+            margin: auto;
+            background-color: <?php echo '#'.rand(5, 999); ?>;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        form input {
+            border: none;
+            border-radius: 4px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pagina 2</h1>
+    <div>
+        <h1>Este é um cabeçalho <?php echo rand(0, 9999); ?></h1>
+
+        <form action="" method="POST">
+            <input type="text" name="email" id="email" placeholder="E-mail"><br><br>
+
+            <input type="password" name="senha" id="senha" placeholder="Senha"><br><br>
+
+            <input type="submit" value="Entrar">
+        </form>  
+    </div>
+    
+</body>
+</html>

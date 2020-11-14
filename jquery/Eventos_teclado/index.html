@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .fundo{
+            background-color: #069;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+        <label for="teste">Teste:</label><br>
+        <input type="text" name="teste" id="teste"><br><br>
+    
+    <form action="" method="post" id="form">
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome"><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="text" name="email" id="email"><br><br>
+
+        <label for="idade">Idade:</label>
+        <select name="idade" id="idade">
+            <option value="10">10 anos</option>
+            <option value="20">20 anos</option>
+            <option value="30">30 anos</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+
+
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        
+        $(function(){
+
+            // Evento de teclado
+            $('#nome').on('keydown', function(){
+                console.log("Uma tecla foi apertada");
+            });
+
+            // Evento de teclado
+            $('#nome').on('keyup', function(){
+                console.log("O elemento foi selecionado!");
+            });
+
+            // Evento de teclado
+            $('#teste').on('keyup', function(e){
+                console.log(e.keyCode);
+
+                if(e.keyCode == 13){
+                    var txt = $(this).val();
+                    console.log(txt);
+                    $(this).val('');
+                }
+            });
+
+        });
+
+    </script>
+</body>
+</html>

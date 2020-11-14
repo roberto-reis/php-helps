@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .fundo{
+            background-color: #069;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form action="" method="post" id="form">
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome"><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="text" name="email" id="email"><br><br>
+
+        <label for="idade">Idade:</label>
+        <select name="idade" id="idade">
+            <option value="10">10 anos</option>
+            <option value="20">20 anos</option>
+            <option value="30">30 anos</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+
+
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        
+        $(function(){
+
+            // Evento de select 
+            $('#form').on('submit', function(e){
+                e.preventDefault();
+                console.log("Foi clicado no botão enviar!")
+            });
+
+            // Evento de select
+            $('#nome').on('select', function(){
+                console.log("O elemento foi selecionado!");
+            });
+
+            // Evento de Focado
+            $('#email, #nome').on('focus', function(){
+                $(this).addClass('fundo');
+            });
+            // Evento de Desfocado
+            $('#email, #nome').on('blur', function(){
+                $(this).removeClass('fundo');
+            });
+
+            // Evento de change
+            $('#idade').on('change', function(){
+                console.log( $(this).val() )
+            });
+
+        });
+
+    </script>
+</body>
+</html>

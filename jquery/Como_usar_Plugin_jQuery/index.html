@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+
+        CEP: <br>
+        <input type="text" name="cep" id="cep"> <br> <br>
+
+        CPF: <br>
+        <input type="text" name="cep" id="cep" data-mask="000.000.000-00">
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="jquery.mask.js"></script>
+    <script>
+        
+        $(function(){
+            
+            $('#cep').mask('00000-000');
+
+
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .botao{
+            width: 150px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #999;
+            text-align: center;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="botao">Botão</div>
+
+
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        
+        $(function(){
+
+            $('.botao').on('mousedown', function(){
+                console.log("Apertou o mouse!");
+            });
+
+            $('.botao').on('mouseup', function(){
+                console.log("Soltou o mouse!");
+            });
+
+            $('.botao').on('mousemove', function(){
+                console.log("Passou o mouse!");
+                $(this).css('color','#900');
+            });
+
+            $('.botao').on('mouseout', function(){
+                console.log("Tirou o mouse!");
+                $(this).css('color','#065');
+            });
+
+            $('.botao').on('mouseover', function(){
+                console.log("Mause está em cima!");
+            });
+
+            $('.botao').on('dblclick', function(){
+                console.log("Duplo clique!");
+            });
+
+
+
+        });
+
+    </script>
+</body>
+</html>

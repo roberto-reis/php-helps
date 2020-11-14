@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .horaescolha{
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            color: #fff;
+            position: absolute;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    Hora 1: <br>
+    <input type="text" name="hora1" id="hora1"><br><br>
+
+    Hora 2: <br>
+    <input type="text" name="hora2" id="hora2"><br><br>
+
+    Hora 3: <br>
+    <input type="text" name="hora3" id="hora3"><br><br>
+
+    Hora 4: <br>
+    <input type="text" name="hora4" id="hora4"><br><br>
+
+    <div class="horaescolha">
+        <button>10:00</button>
+        <button>13:00</button>
+        <button>16:00</button>
+        <button>20:00</button>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <script>
+        
+        $(function(){
+            var horaescolhaCampo;
+
+            $('input').on('focus', function(){
+                var pos = $(this).offset();
+                var width = $(this).width();
+
+                $('.horaescolha').css('left', pos.left + width + 5);
+                $('.horaescolha').css('top', pos.top);
+                $('.horaescolha').show();
+
+                horaescolhaCampo = $(this);
+
+            });
+
+            $('input').on('blur', function(){
+                setTimeout(function(){
+                    $('.horaescolha').hide();
+                }, 200);
+
+            });
+
+            $('.horaescolha button').on('click', function(){
+                var hora = $(this).html();
+
+                horaescolhaCampo.val(hora);
+
+            });
+
+
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        .inputtext {
+            background-color: #eee;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="algo">
+
+        Esse é um testo.
+
+    </div>
+
+    <input type="text" name="" id="" class="inputtext">
+    
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        // Remover espaços
+        var valor = $.trim($('#algo').html());
+
+        // percorre togos os itens
+        $('li').each(function(){
+            alert($(this).html());
+        });
+
+        // Verificar o tipo de variavel
+        $.type(valor);
+
+        // Verifica se é numerico
+        $.isNumeric(valor);
+
+        // Verificar se um elemento eixste
+        if($("#algo").length > 0){
+            alert("Existe");
+        } else{
+            alert("Não Existe");
+        }
+
+        // Verificar se o elemento tem uma classe
+        if($("input").hasClass("inputtext") ){
+            alert("Tem a Classe");
+        } else{
+            alert("Não Tem a Classe");
+        }
+       
+    </script>
+</body>
+</html>

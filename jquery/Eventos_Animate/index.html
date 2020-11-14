@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .botao{
+            width: 150px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #999;
+            text-align: center;
+            cursor: pointer;
+            
+        }
+
+        .div{
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="botao">Botão</div>
+
+        <div class="div"></div>
+
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        
+        $(function(){
+            
+            $('.botao').on('click', function(){
+                $('.div').animate({
+                    'top':80,
+                    'left':400,
+                    'height':50,
+                    'width':50
+                }, {
+
+                        duration:1500,
+                        complete:function(){
+
+                        $('.div').animate({
+                            'top':40,
+                            'left':8,
+                            'height':150,
+                            'width':150
+                        }, 1500);
+
+                    }
+
+
+                });
+            });
+
+
+        });
+
+    </script>
+</body>
+</html>

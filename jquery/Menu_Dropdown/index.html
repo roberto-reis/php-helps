@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        .menu{
+            height: 40px;
+            background-color:#333;
+            color: #fff;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        li{
+            line-height: 40px;;
+            padding: 0px 20px;
+            cursor: pointer;
+        }
+        .menu1{
+            height: 40px;
+        }
+        .sub-menu{
+            position: absolute;
+            width: 150px;
+            height: 120px;
+            background-color: #000;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <ul>
+            <li>
+                <div class="menu1">Home</div>
+                <div class="sub-menu">
+                    Opção 1 <br>
+                    Opção 2 <br>
+                    Opção 3
+                </div>
+            </li>
+            <li>menu 1</li>
+            <li>
+                <div class="menu1">Menu 2</div>
+                <div class="sub-menu">
+                    Opção 1 <br>
+                    Opção 2 <br>
+                    Opção 3
+                </div>
+            </li>
+            <li>
+                <div class="menu1">Menu 3</div>
+                <div class="sub-menu">
+                    Opção 1 <br>
+                    Opção 2 <br>
+                    Opção 3
+                </div>
+            </li>
+            <li>menu 4</li>
+        </ul>
+    </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <script>
+        
+        $(function(){
+            
+            $('li').hover(function(){
+                $(this).find('.sub-menu').slideDown();
+            }, function(){
+                $(this).find('.sub-menu').slideUp();
+            });
+
+
+
+        });
+
+    </script>
+</body>
+</html>
