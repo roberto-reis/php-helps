@@ -8,6 +8,7 @@ $idade = filter_input(INPUT_POST, 'idade', FILTER_VALIDATE_INT);
 
 
 if($nome && $email && $idade) {
+
     echo "NOME: ".$nome."<br>";
     echo "EMAIL: ".$email."<br>";
     echo "IDADE: ".$idade;
